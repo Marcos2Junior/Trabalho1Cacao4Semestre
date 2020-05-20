@@ -95,19 +95,19 @@ body {
 }
 
 .view-produtos-tag strong{
-  display: none;
+  opacity: 0;
   background-color:  rgba(0, 0, 0, 0.4);
 }
 
 .view-produtos-tag:hover strong{
   background-color:  rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  display: block;
+  opacity: 1;
 }
 
 .div-coracaozinho{
   display: none;
-  float: left; 
+position: relative;
   margin:-20px -10px -10px -20px;
 }
 
@@ -185,6 +185,7 @@ footer{
 
 .div-footer{
   text-align: center;
+  padding: 20px;
 }
 
 .div-footer ul{
@@ -209,4 +210,55 @@ footer{
   font-size: 20pt;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.div-footer i{
+  font-size: 40px;
+  margin: 5px;
+}
+.label-footer{
+  text-align: center;
+  padding-top: 15px;
+  width: 100%;
+}
+.div-footer-icons{
+  padding: 20px 0px 50px 0px;
+}
+.seguranca p{
+  font-size: 15pt;
+  margin: -10px;
+}
+.div-footer-icons i{
+  font-size: 40px;
+}
+
+.seguranca i{
+  font-size: 60px;
+}
+
+.seguranca{
+ display: inline-block;
+ margin: 15px;
+}
+
+
+.label-footer-icons i{
+  font-size: 30px;
+  margin: 5px;
+}
+.label-footer-icons {
+  float: right;
+}
+
+.label-footer-icons a{
+  transition: .5s;
+  text-decoration: none;
+  color: white;
+}
+
+.label-footer-icons a:hover{
+  color: #333;
+  cursor: pointer;
+}
+
+
+
  
