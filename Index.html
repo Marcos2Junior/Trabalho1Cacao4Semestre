@@ -4,215 +4,276 @@
     <title>Loja do Marcão</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
-  <body>
-    <div class="navbar">
-      <div class="logo"><label> LOJA DO MARCÃO </label><br /></div>
-      <div class="slogan">
-        <label>Porque você merece o melhor, experimente!</label>
-      </div>
-      <ul>
-        <li>
-          <a href="~/../Index.html"><i class="fas fa-home"></i> &nbsp;Inicio</a>
-        </li>
-        <li>
-          <a href="#"><i class="fas fa-splotch"></i> &nbsp;Novidades</a>
-        </li>
-        <li>
-          <a href="#"><i class="far fa-envelope"></i> &nbsp;Fale conosco</a>
-        </li>
+  <div id="container">
+    <body>
+      <div class="navbar">
+        <div class="logo"><label> LOJA DO MARCÃO </label><br /></div>
+        <div class="slogan">
+          <label>Porque você merece o melhor, experimente!</label>
+        </div>
+        <ul>
+          <li>
+            <a href="~/../Index.html"
+              ><i class="fas fa-home"></i> &nbsp;Inicio</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-splotch"></i> &nbsp;Novidades</a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-envelope"></i> &nbsp;Fale conosco</a>
+          </li>
 
-        <li style="float: right; margin-right: 30px;">
-          <a href="#"><i class="fas fa-user"></i> &nbsp;Login</a>
-        </li>
-        <li style="float: right;">
-          <a href="#"
-            ><i class="fas fa-shopping-cart"></i> &nbsp;Meu carrinho</a
+          <li
+            onclick="exibeLogin()"
+            style="float: right; margin-right: 30px; cursor: pointer;"
           >
-        </li>
-        <form class="nav-search">
-          <input type="text" placeholder="&nbsp;O que você deseja?" />
-          <button>
-            <i class="fas fa-search" style="color: white;"></i>
-            &nbsp;Buscar
-          </button>
-        </form>
-      </ul>
-    </div>
-    <div class="view-produtos">
-      <div class="view-produtos-tittle">
-        Confira essas ofertas que separamos para você
+            <a><i class="fas fa-user"></i> &nbsp;Login</a>
+          </li>
+          <li style="float: right;">
+            <a href="#"
+              ><i class="fas fa-shopping-cart"></i> &nbsp;Meu carrinho</a
+            >
+          </li>
+          <form class="nav-search">
+            <input type="text" placeholder="&nbsp;O que você deseja?" />
+            <button>
+              <i class="fas fa-search" style="color: white;"></i>
+              &nbsp;Buscar
+            </button>
+          </form>
+        </ul>
       </div>
-      <div id="container">
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0001.jpg" />
-          <label>Camiseta de leão TOP</label><br />
-          <hr />
-          <strike>R$69,00</strike> <span>R$59,99</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
+      <div class="view-produtos">
+        <div class="view-produtos-tittle">
+          Confira essas ofertas que separamos para você
         </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0002.jpg" />
-          <label>Kit 6 Camisetas BrabaD+</label><br />
-          <hr />
-          <strike>R$150,00</strike> <span>R$120,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
-        </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0003.jpg" />
-          <label>Camiseta Branca</label><br />
-          <hr />
-          <strike>R$50,00</strike> <span>R$40,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
-        </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0004.jpg" />
-          <label>Camiseta Linda</label><br />
-          <hr />
-          <strike>R$69,00</strike> <span>R$71,99</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
-        </div>
-      </div>
-
-      <div class="view-exibe-meio-produtos">
         <div id="container">
-          <div class="box">
-            <i
-              class="fas fa-shield-alt"
-              style="font-size: 40px; margin: 10px;"
-            ></i
-            >Compre com segurança
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0001.jpg" />
+            <label>Camiseta de leão TOP</label><br />
+            <hr />
+            <strike>R$69,00</strike> <span>R$59,99</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
           </div>
-          <div class="box">
-            <i
-              class="far fa-thumbs-up"
-              style="font-size: 40px; margin: 10px;"
-            ></i
-            >Loja Super legal
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0002.jpg" />
+            <label>Kit 6 Camisetas BrabaD+</label><br />
+            <hr />
+            <strike>R$150,00</strike> <span>R$120,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
           </div>
-          <div class="box">
-            <i class="fas fa-truck" style="font-size: 40px; margin: 10px;"></i
-            >Frete Grátis
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0003.jpg" />
+            <label>Camiseta Branca</label><br />
+            <hr />
+            <strike>R$50,00</strike> <span>R$40,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
+          </div>
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0004.jpg" />
+            <label>Camiseta Linda</label><br />
+            <hr />
+            <strike>R$69,00</strike> <span>R$71,99</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
           </div>
         </div>
-      </div>
 
-      <div class="view-produtos-tittle">
-        Nossos produtos mais comprados
+        <div class="view-exibe-meio-produtos">
+          <div id="container">
+            <div class="box">
+              <i
+                class="fas fa-shield-alt"
+                style="font-size: 40px; margin: 10px;"
+              ></i
+              >Compre com segurança
+            </div>
+            <div class="box">
+              <i
+                class="far fa-thumbs-up"
+                style="font-size: 40px; margin: 10px;"
+              ></i
+              >Loja Super legal
+            </div>
+            <div class="box">
+              <i class="fas fa-truck" style="font-size: 40px; margin: 10px;"></i
+              >Frete Grátis
+            </div>
+          </div>
+        </div>
+
+        <div class="view-produtos-tittle">
+          Nossos produtos mais comprados
+        </div>
+        <div id="container">
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0005.jpg" />
+            <label>Tênis Nike</label><br />
+            <hr />
+            <strike>R$1500,00</strike> <span>R$690,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
+          </div>
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0006.jpg" />
+            <label>Tênis Old School Vans</label><br />
+            <hr />
+            <strike>R$300,00</strike> <span>R$450,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
+          </div>
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0007.jpg" />
+            <label>Relógio muito top</label><br />
+            <hr />
+            <strike>R$50,00</strike> <span>R$25,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
+          </div>
+          <div class="view-produtos-tag box">
+            <div class="div-coracaozinho">
+              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+            </div>
+            <img src="~/../images/0008.jpg" />
+            <label>Calça coladinha sensual</label><br />
+            <hr />
+            <strike>R$200</strike> <span>R$199,00</span> <br />
+            <strong>Até 10x SEM JUROS!</strong>
+          </div>
+        </div>
       </div>
+    </body>
+    <footer>
       <div id="container">
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0005.jpg" />
-          <label>Tênis Nike</label><br />
-          <hr />
-          <strike>R$1500,00</strike> <span>R$690,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
+        <div class="box div-footer">
+          <label>Precida de ajuda?</label>
+          <ul>
+            <li><a href="#">Dúvidas frequentes</a></li>
+            <li><a href="#">Tempo de entrega</a></li>
+            <li><a href="#">Trocas e devoluções</a></li>
+            <li><a href="#">Central de relacionamentos</a></li>
+            <li><a href="#">Regras de voucher</a></li>
+            <li><a href="#">Contrato de compra e venda</a></li>
+          </ul>
         </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-          </div>
-          <img src="~/../images/0006.jpg" />
-          <label>Tênis Old School Vans</label><br />
-          <hr />
-          <strike>R$300,00</strike> <span>R$450,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
+        <div class="box div-footer">
+          <label>SOBRE NÓS</label>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Seja um parceiro marketplace</a></li>
+            <li><a href="#">Programa de afiliados</a></li>
+            <li><a href="#">Anuncie conosco</a></li>
+          </ul>
         </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+        <div class="box div-footer">
+          <div class="div-footer-icons">
+            <label>FORMAS DE PAGAMENTO</label><br /><br />
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-diners-club"></i>
+            <i class="fab fa-cc-discover"></i>
+            <i class="fab fa-cc-jcb"></i>
           </div>
-          <img src="~/../images/0007.jpg" />
-          <label>Relógio muito top</label><br />
-          <hr />
-          <strike>R$50,00</strike> <span>R$25,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
-        </div>
-        <div class="view-produtos-tag box">
-          <div class="div-coracaozinho">
-            <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
+          <div class="seguranca">
+            <i class="fas fa-user-shield"></i>
+            <p>Seus dados seguros</p>
           </div>
-          <img src="~/../images/0008.jpg" />
-          <label>Calça coladinha sensual</label><br />
-          <hr />
-          <strike>R$200</strike> <span>R$199,00</span> <br />
-          <strong>Até 10x SEM JUROS!</strong>
+          <div class="seguranca">
+            <i class="fas fa-shield-alt"></i>
+            <p>Site com criptografia SSL</p>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-  <footer>
-    <div id="container">
-      <div class="box div-footer">
-        <label>Precida de ajuda?</label>
-        <ul>
-          <li><a href="#">Dúvidas frequentes</a></li>
-          <li><a href="#">Tempo de entrega</a></li>
-          <li><a href="#">Trocas e devoluções</a></li>
-          <li><a href="#">Central de relacionamentos</a></li>
-          <li><a href="#">Regras de voucher</a></li>
-          <li><a href="#">Contrato de compra e venda</a></li>
-        </ul>
+      <hr />
+      <div class="label-footer box">
+        <label>
+          COPYRIGHT © 2020 TODOS OS DIREITOS RESERVADOS. - LOJA DO MARCÃO
+        </label>
       </div>
-      <div class="box div-footer">
-        <label>SOBRE NÓS</label>
-        <ul>
-          <li><a href="#">Quem somos</a></li>
-          <li><a href="#">Política de privacidade</a></li>
-          <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Seja um parceiro marketplace</a></li>
-          <li><a href="#">Programa de afiliados</a></li>
-          <li><a href="#">Anuncie conosco</a></li>
-        </ul>
+      <div class="label-footer-icons box">
+        <a href="https://www.instagram.com/maajunioor/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Marcos2Junior" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/MarcosJuunior2/" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://open.spotify.com/user/gluguer" target="_blank"
+          ><i class="fab fa-spotify"></i
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=5514981448487"
+          target="_blank"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
       </div>
-      <div class="box div-footer">
-        <div class="div-footer-icons">
-          <label>FORMAS DE PAGAMENTO</label><br /><br />
-          <i class="fab fa-cc-paypal"></i>
-          <i class="fab fa-cc-visa"></i>
-          <i class="fab fa-cc-mastercard"></i>
-          <i class="fab fa-cc-diners-club"></i>
-          <i class="fab fa-cc-discover"></i>
-          <i class="fab fa-cc-jcb"></i>
-        </div>
-        <div class="seguranca">
-          <i class="fas fa-user-shield"></i>
-          <p>Seus dados seguros</p>
-        </div>
-        <div class="seguranca">
-          <i class="fas fa-shield-alt"></i>
-          <p>Site com criptografia SSL</p>
-        </div>
-      </div>
-    </div>
-    <hr />
-    <div class="label-footer box">
-      <label>
-        COPYRIGHT © 2020 TODOS OS DIREITOS RESERVADOS. - LOJA DO MARCÃO
-      </label>
-    </div>
-    <div class="label-footer-icons box">
-      <a href="https://www.instagram.com/maajunioor/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Marcos2Junior" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/MarcosJuunior2/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://open.spotify.com/user/gluguer" target="_blank"><i class="fab fa-spotify"></i></a>
-        <a href="https://api.whatsapp.com/send?phone=5514981448487" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </html>
+
+<form id="form-login" class="form">
+  <div style="padding: 10px; text-align: center; font-size: 20pt;">
+  <i onclick="window.location.reload()" class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i>
+  <label>Entre com sua conta</label>
+</div>
+  <label>Login:</label><br />
+  <input type="text" placeholder="CPF ou Email" /><br />
+  <label>Senha:</label><br />
+  <input type="password" placeholder="Sua senha" />
+  <button>Entrar</button>
+  <p>
+    Ainda não possui um cadastro?
+    <a onclick="exibeCadastro()" style="cursor: pointer;">Crie sua conta agora!</a>
+  </p>
+</form>
+
+<form id="form-cadastro" class="form">
+  <div style="padding: 10px; text-align: center; font-size: 20pt;">
+  <i onclick="window.location.reload()"class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i>
+  <label>Crie sua conta</label>
+</div>
+  <label>Nome</label><br />
+  <input type="text" placeholder="Nome Completo" /><br />
+  <label>Email</label><br />
+  <input type="email" placeholder="Email" /><br />
+
+  <label>Telefone</label><br />
+  <input type="tel" placeholder="Telefone" /><br />
+
+  <label>CPF</label><br />
+  <input type="text" placeholder="CPF" /><br />
+
+  <label>Senha:</label><br />
+  <input type="password" placeholder="Sua senha" />
+  <button>Registrar</button>
+  <p>
+    Realizando seu cadastro você concorda com todos os 
+    <a style="cursor: pointer;">termos e condições.</a>
+  </p>
+</form>
