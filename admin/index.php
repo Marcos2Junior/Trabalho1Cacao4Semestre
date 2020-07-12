@@ -17,15 +17,20 @@ if($status != 2) {
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<title>Loja 412 | Painel de Controle</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Usu�rios</h1>
-<a href='criarUsuario.php'>Criar usu�rio</a><br /><br />
-<table cellspacing="2" cellpadding="5" border="1">
+
+
+    <div class="viewindexadmin">
+        <h1>Usuários</h1>
+        <a href='criarUsuario.php'>Criar usuário</a><br /><br />
+        <table cellspacing="2" cellpadding="5" border="1">
 	<tr>
 		<th>ID</th>
-		<th>Usu�rio</th>
-		<th>Op��es</th>
+		<th>Usuário</th>
+		<th>Opções</th>
 	</tr>
 	<?php
 		foreach($usuarios->listarUsuarios() as $usuario) {
@@ -36,11 +41,13 @@ if($status != 2) {
 			echo "</tr>";
 		}
 	?>
-</table>
+        </table>
+    </div>
 
-<h1>Produtos</h1>
-<a href='criarProduto.php'>Criar produto</a><br /><br />
-<table cellspacing="2" cellpadding="5" border="1">
+    <div class="viewindexadmin">
+        <h1>Produtos</h1>
+        <a href='criarProduto.php'>Criar produto</a><br /><br />
+        <table cellspacing="2" cellpadding="5" border="1">
 	<tr>
 		<th>ID</th>
 		<th>Produto</th>
@@ -55,7 +62,12 @@ if($status != 2) {
 			echo "</tr>";
 		}
 	?>
-</table>
+        </table>
+    </div>
 
+<div class="navAdmin">
+    <a href="../index.php">Voltar ao site</a> &nbsp;&nbsp; || &nbsp;&nbsp;
+    <a href="../logout.php">Desconectar</a>
+</div>
 </body>
 </html>

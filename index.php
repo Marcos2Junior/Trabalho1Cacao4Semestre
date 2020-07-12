@@ -58,7 +58,7 @@ $login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> 
             ?>
           </li>
           <li style="float: right;">
-            <a href="#"
+            <a href="carrinho.php"
               ><i class="fas fa-shopping-cart"></i> &nbsp;Meu carrinho</a
             >
           </li>

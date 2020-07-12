@@ -21,12 +21,16 @@ if($_POST) {
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<title>Loja do marcão | Criar usuário</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Criar usuário</h1>
-
-<form method="POST" action="criarUsuario.php">
-	<label>Usu�rio</label>
+<form method="POST" action="criarUsuario.php" class="form">
+    <div style="padding: 10px; text-align: center; font-size: 20pt;">
+        <a href="index.php"><i class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i></a>
+        <label>Criar usuário</label>
+    </div>
+	<label>Usuário</label>
 	<input type="text" name="usuario" /><br /><br />
 	
 	<label>Senha</label>
@@ -35,7 +39,7 @@ if($_POST) {
 	<label>Administrador?</label>
 	<select name="admin">
 		<option value="1">Sim</option>
-		<option value="0">N�o</option>
+		<option value="0">Não</option>
 	</select><br /><br />
 	
 	<input type="submit" value="Enviar" />

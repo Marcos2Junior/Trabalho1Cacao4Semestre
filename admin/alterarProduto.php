@@ -30,11 +30,15 @@ $produto = $db->pegarDado("produtos", "*", "id = $id");
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<title>Loja do Marcão | Alterar produto</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Alterar produto</h1>
-
-<form method="POST" action="alterarProduto.php?id=<?php echo $id; ?>">
+<form method="POST" action="alterarProduto.php?id=<?php echo $id; ?>" class="form">
+    <div style="padding: 10px; text-align: center; font-size: 20pt;">
+        <a href="index.php"><i class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i></a>
+        <label>Alterar produto</label>
+    </div>
 	<label>Titulo</label>
 	<input type="text" name="titulo" value="<?php echo $produto['titulo']; ?>" /><br /><br />
 

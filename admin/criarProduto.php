@@ -8,7 +8,7 @@ $status = $usuarios->verificaStatus();
 $db = new Database;
 
 if($status != 2) {
-	die('Voc� n�o possui acesso a esta �rea');
+	die('Você não possui acesso a esta área');
 }
 
 if($_POST) {
@@ -22,18 +22,17 @@ if($_POST) {
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<title>Loja do Marcão | Criar produto</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Criar produto</h1>
+<form method="POST" action="criarProduto.php" class="form">
+    <div style="padding: 10px; text-align: center; font-size: 20pt;">
+        <a href="index.php"><i class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i></a>
+        <label>Criar Produto</label>
+    </div>
 
-<form method="POST" action="criarProduto.php">
-	<label>ISBN</label>
-	<input type="text" name="isbn" /><br /><br />
-	
-	<label>Autor</label>
-	<input type="text" name="autor" /><br /><br />
-	
-	<label>Titulo</label>
+	<label>Nome</label>
 	<input type="text" name="titulo" /><br /><br />
 	
 	<label>Preço</label>
@@ -47,9 +46,6 @@ if($_POST) {
 
     <label>Imagem</label>
     <input type="file" name="caminho" /><br /><br />
-	
-	<label>Sum�rio</label><br />
-	<textarea rows="5" cols="30" name="sumario"></textarea><br /><br />-----
 	
 	<input type="submit" value="Enviar" />
 </form>

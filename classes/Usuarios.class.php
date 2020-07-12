@@ -121,6 +121,13 @@ class Usuarios {
             return 'preencha todos os campos';
         }
 	}
+
+    public function alterarUsuarioAdmin($id, $usuario, $senha, $admin)
+    {
+        $senha = md5($senha);
+        $this->db->alterarDados("usuarios", "id = $id", array('usuario' => $usuario, 'senha' => $senha, 'admin' => $admin));
+
+    }
 	
 	/**
 	* Neste método, simplificamos a maneira de remover usuários

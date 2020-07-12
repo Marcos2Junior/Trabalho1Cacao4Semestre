@@ -309,3 +309,31 @@ footer {
   color: white;
   display: block;
 }
+
+.viewindexadmin{
+  float: left;
+  margin: 50px;
+  left: 50%;
+  top: 32%;
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.viewindexadmin h1
+{
+  color: black;
+}
+
+.navAdmin
+{
+  background-color:#333;
+  font-size: 15pt;
+  padding: 5px;
+  border-radius: 20px;
+}
+.navAdmin a
+{
+  text-decoration: none;
+  color: white;
+}

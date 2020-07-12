@@ -17,7 +17,7 @@ if(empty($_GET['id'])) {
 }
 
 if($_POST) {
-	$usuarios->alterarUsuario($id, $_POST['usuario'], $_POST['senha'], $_POST['admin']);
+	$usuarios->alterarUsuarioAdmin($id, $_POST['usuario'], $_POST['senha'], $_POST['admin']);
 	die('<meta http-equiv="refresh" content="0;url=index.php">');
 }
 
@@ -29,11 +29,16 @@ $usuario = $db->pegarDado("usuarios", "*", "id = $id");
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
 	<title>Loja do Marcão | Alterar usuário</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<h1>Alterar usuário</h1>
 
-<form method="POST" action="alterarUsuario.php?id=<?php echo $id; ?>">
+<form method="POST" action="alterarUsuario.php?id=<?php echo $id; ?>" class="form">
+    <div style="padding: 10px; text-align: center; font-size: 20pt;">
+        <a href="index.php"><i class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i></a>
+        <label>Editar usuário</label>
+    </div>
 	<label>Usuário</label>
 	<input type="text" name="usuario" value="<?php echo $usuario['usuario']; ?>" /><br /><br />
 	
