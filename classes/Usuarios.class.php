@@ -88,15 +88,38 @@ class Usuarios {
 	* @param string $id ID do usuário a ser alterado
 	* @param string $usuario Usuário a ser alterado
 	* @param string $senha Senha do usuário a ser alterado
+     * @param string $confsenha Confirmacao da nova senha
+     * @param string $senhaatual senha atual do usuario
+     * @param int $admin alterar perfil administrador
+     * @return string Retornaremos string result da validacao dos dados
 	*/
-	public function alterarUsuario($id, $usuario, $senha, $admin) {
-		// Caso a senha venha vazia, iremos alterar apenas os campos de usuário e admin
-		if(empty($senha)) {
-			$this->db->alterarDados("usuarios", "id = $id", array('usuario' => $usuario, 'admin' => $admin));
-		} else {
-			$senha = md5($senha);
-			$this->db->alterarDados("usuarios", "id = $id", array('usuario' => $usuario, 'senha' => $senha, 'admin' => $admin));
+	public function alterarUsuario($id, $usuario, $senha, $confsenha, $senhaatual, $admin)
+    {
+		if(!empty($senhaatual) && !empty($senha) && !empty($confsenha) && !empty($usuario))
+		{
+		    if($senha == $confsenha)
+            {
+                $user = $this->db->pegarDado("usuarios", "*", "id = $id");
+                if($user['senha'] == md5($senhaatual))
+                {
+                    $senha = md5($senha);
+                    $this->db->alterarDados("usuarios", "id = $id", array('usuario' => $usuario, 'senha' => $senha, 'admin' => $admin));
+                    return 'Dados alterados com sucesso';
+                }
+                else
+                {
+                    return 'senha atual invalida';
+                }
+            }
+		    else
+            {
+                return 'senha nova difere da confirmacao';
+            }
 		}
+		else
+        {
+            return 'preencha todos os campos';
+        }
 	}
 	
 	/**

@@ -53,7 +53,7 @@ $login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> 
                   }
               else
               {
-                  echo '<a href="logout.php"><i class="fas fa-user"></i> &nbsp;Sair</a>';
+                  echo '<a href="conta.php"><i class="fas fa-user"></i> &nbsp;Minha conta</a>';
               }
             ?>
           </li>
