@@ -1,10 +1,28 @@
+<?php
+
+require('./autoloader.php');
+
+$usuarios = new Usuarios();
+$produtos = new Produtos();
+$status = $usuarios->verificaStatus();
+
+if($status == 0) {
+$login = 'Você não está logado. Clique <a href="login.php">aqui</a> para logar, ou <a href="registrar.php">registre-se!</a>';
+} elseif($status == 1) {
+$login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> | <a href="conta.php">Minha conta</a> | <a href="logout.php">Sair</a> |';
+} else {
+$login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> | <a href="conta.php">Minha conta</a> | <a href="admin/">Admin</a> | <a href="logout.php">Sair</a>';
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Loja do Marcão</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <script type="text/javascript" src="script/script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <div id="container">
@@ -27,11 +45,17 @@
             <a href="#"><i class="far fa-envelope"></i> &nbsp;Fale conosco</a>
           </li>
 
-          <li
-            onclick="exibeLogin()"
-            style="float: right; margin-right: 30px; cursor: pointer;"
-          >
-            <a><i class="fas fa-user"></i> &nbsp;Login</a>
+          <li style="float: right; margin-right: 30px; cursor: pointer;">
+              <?php
+              if($status == 0)
+                  {
+                      echo '<a href="login.php"><i class="fas fa-user"></i> &nbsp;Login</a>';
+                  }
+              else
+              {
+                  echo '<a href="logout.php"><i class="fas fa-user"></i> &nbsp;Sair</a>';
+              }
+            ?>
           </li>
           <li style="float: right;">
             <a href="#"
@@ -52,46 +76,23 @@
           Confira essas ofertas que separamos para você
         </div>
         <div id="container">
-          <div class="view-produtos-tag box">
+
+          <table>
+            <?php
+		foreach($produtos->listarProdutos('', '', '', '', '6',1) as $produto) {
+          echo '<a href="carrinho.php?adiciona='. $produto['id']. '"<div class="view-produtos-tag box">
             <div class="div-coracaozinho">
               <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0001.jpg" />
-            <label>Camiseta de leão TOP</label><br />
-            <hr />
-            <strike>R$69,00</strike> <span>R$59,99</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0002.jpg" />
-            <label>Kit 6 Camisetas BrabaD+</label><br />
-            <hr />
-            <strike>R$150,00</strike> <span>R$120,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0003.jpg" />
-            <label>Camiseta Branca</label><br />
-            <hr />
-            <strike>R$50,00</strike> <span>R$40,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0004.jpg" />
-            <label>Camiseta Linda</label><br />
-            <hr />
-            <strike>R$69,00</strike> <span>R$71,99</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
+            </div>';
+            echo '<img src="~/../images/'.$produto['caminho'] .'" />';
+            echo '<label>'. $produto['titulo'] . '</label><br />';
+            echo '<hr />';
+            echo '<strike>R$' . $produto['valorold'] . '</strike> <span>R$'.$produto['preco'].'</span> <br />';
+            echo '<strong>Até 10x SEM JUROS!</strong>
+          </div></a>';
+            }
+            ?>
+          </table>
         </div>
 
         <div class="view-exibe-meio-produtos">
@@ -121,46 +122,21 @@
           Nossos produtos mais comprados
         </div>
         <div id="container">
-          <div class="view-produtos-tag box">
+            <?php
+            foreach($produtos->listarProdutos('', '', '', '', '6', 2) as $produto) {
+                echo '<a href="carrinho.php?adiciona='. $produto['id']. '"<div class="view-produtos-tag box">
             <div class="div-coracaozinho">
               <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0005.jpg" />
-            <label>Tênis Nike</label><br />
-            <hr />
-            <strike>R$1500,00</strike> <span>R$690,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0006.jpg" />
-            <label>Tênis Old School Vans</label><br />
-            <hr />
-            <strike>R$300,00</strike> <span>R$450,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0007.jpg" />
-            <label>Relógio muito top</label><br />
-            <hr />
-            <strike>R$50,00</strike> <span>R$25,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
-          <div class="view-produtos-tag box">
-            <div class="div-coracaozinho">
-              <i class="fas fa-heart" style="font-size: 30px; color: red;"></i>
-            </div>
-            <img src="~/../images/0008.jpg" />
-            <label>Calça coladinha sensual</label><br />
-            <hr />
-            <strike>R$200</strike> <span>R$199,00</span> <br />
-            <strong>Até 10x SEM JUROS!</strong>
-          </div>
+            </div>';
+                echo '<img src="~/../images/'.$produto['caminho'] .'" />';
+                echo '<label>'. $produto['titulo'] . '</label><br />';
+                echo '<hr />';
+                echo '<strike>R$' . $produto['valorold'] . '</strike> <span>R$'.$produto['preco'].'</span> <br />';
+                echo '<strong>Até 10x SEM JUROS!</strong>
+          </div></a>';
+            }
+            ?>
+            </table>
         </div>
       </div>
     </body>
@@ -236,44 +212,3 @@
     </footer>
   </div>
 </html>
-
-<form id="form-login" class="form">
-  <div style="padding: 10px; text-align: center; font-size: 20pt;">
-  <i onclick="window.location.reload()" class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i>
-  <label>Entre com sua conta</label>
-</div>
-  <label>Login:</label><br />
-  <input type="text" placeholder="CPF ou Email" /><br />
-  <label>Senha:</label><br />
-  <input type="password" placeholder="Sua senha" />
-  <button>Entrar</button>
-  <p>
-    Ainda não possui um cadastro?
-    <a onclick="exibeCadastro()" style="cursor: pointer;">Crie sua conta agora!</a>
-  </p>
-</form>
-
-<form id="form-cadastro" class="form">
-  <div style="padding: 10px; text-align: center; font-size: 20pt;">
-  <i onclick="window.location.reload()"class='fas fa-times' style="float: right; cursor: pointer; font-size: 20pt;"></i>
-  <label>Crie sua conta</label>
-</div>
-  <label>Nome</label><br />
-  <input type="text" placeholder="Nome Completo" /><br />
-  <label>Email</label><br />
-  <input type="email" placeholder="Email" /><br />
-
-  <label>Telefone</label><br />
-  <input type="tel" placeholder="Telefone" /><br />
-
-  <label>CPF</label><br />
-  <input type="text" placeholder="CPF" /><br />
-
-  <label>Senha:</label><br />
-  <input type="password" placeholder="Sua senha" />
-  <button>Registrar</button>
-  <p>
-    Realizando seu cadastro você concorda com todos os 
-    <a style="cursor: pointer;">termos e condições.</a>
-  </p>
-</form>
