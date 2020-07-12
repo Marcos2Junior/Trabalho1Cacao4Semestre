@@ -12,6 +12,11 @@ if($status != 2) {
 }
 
 if($_POST) {
+
+    $uploaddir = '/images/';
+    $uploadfile = $uploaddir . basename($_FILES['caminho']['name']);
+    move_uploaded_file($_FILES['caminho']['tmp_name'], $uploadfile);
+
 	$produtos->criarProduto($_POST);
 	die('<meta http-equiv="refresh" content="0;url=index.php">');
 }
@@ -43,9 +48,6 @@ if($_POST) {
 
     <label>Grupo</label>
     <input type="number" min="1" max="2" name="grupo" /><br /><br />
-
-    <label>Imagem</label>
-    <input type="file" name="caminho" /><br /><br />
 	
 	<input type="submit" value="Enviar" />
 </form>

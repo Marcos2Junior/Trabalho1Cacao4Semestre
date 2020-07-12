@@ -65,7 +65,7 @@ if(isset($_POST['compra'])) {
     
         <div style="padding: 10px; text-align: center; font-size: 20pt;">
             <a href="index.php"><i class=\'fas fa-times\' style="float: right; cursor: pointer; font-size: 20pt;"></i></a>
-            <label>Olá'. $_SESSION['user'] .'!<br> Esse é o seu Carrinho de compras</label>
+            <label>Olá '. $_SESSION['user'] .'!<br> Esse é o seu Carrinho de compras</label>
         </div>';
         if(isset($_SESSION['compras'])) {
             $total = 0;

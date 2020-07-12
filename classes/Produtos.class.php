@@ -99,4 +99,9 @@ class Produtos {
 		
 		return $resultado;
 	}
+
+	public function AlterarImagem($id, $caminho)
+    {
+
+    }
 }

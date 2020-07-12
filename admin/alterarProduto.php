@@ -48,9 +48,8 @@ $produto = $db->pegarDado("produtos", "*", "id = $id");
     <label>Preço antigo</label>
     <input type="text" name="valorold" value="<?php echo $produto['valorold']; ?>" /><br /><br />
 
-    <label>Imagem</label>
-    <input type="file" name="caminho" value="<?php echo $produto['caminho']; ?>" /><br /><br />
-	
+    <a href="UploadImages.php?id=<?php echo $id; ?>">Alterar Imagem</a><br><br>
+
 	<input type="submit" value="Enviar" />
 </form>
 

@@ -122,6 +122,7 @@ $login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> 
           Nossos produtos mais comprados
         </div>
         <div id="container">
+        <table>
             <?php
             foreach($produtos->listarProdutos('', '', '', '', '6', 2) as $produto) {
                 echo '<a href="carrinho.php?adiciona='. $produto['id']. '"<div class="view-produtos-tag box">
