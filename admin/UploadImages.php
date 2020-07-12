@@ -22,7 +22,7 @@ $produto = $db->pegarDado("produtos", "*", "id = $id");
 
 <html>
 <head>
-    <title>Upload de imagens</title>
+    <title>Loja do Marcão e do Jarbas | Upload de imagens</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -59,7 +59,7 @@ $produto = $db->pegarDado("produtos", "*", "id = $id");
     if(isset($_FILES['pic']))
     {
         $ext = pathinfo($_FILES['pic']['name'], PATHINFO_EXTENSION); //Pegando extensão do arquivo
-        $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+        $new_name = date("Y.m.d-H.i.s") . '.'. $ext; //Definindo um novo nome para o arquivo
         $dir = '../images/'; //Diretório para uploads
 
         move_uploaded_file($_FILES['pic']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo

@@ -55,7 +55,7 @@ if(isset($_POST['compra'])) {
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-	<title>Loja do Marcão | Carrinho de compras</title>
+	<title>Loja do Marcão e do Jarbas | Carrinho de compras</title>
     <link rel="stylesheet" href="style/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>

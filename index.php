@@ -5,21 +5,12 @@ require('./autoloader.php');
 $usuarios = new Usuarios();
 $produtos = new Produtos();
 $status = $usuarios->verificaStatus();
-
-if($status == 0) {
-$login = 'Você não está logado. Clique <a href="login.php">aqui</a> para logar, ou <a href="registrar.php">registre-se!</a>';
-} elseif($status == 1) {
-$login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> | <a href="conta.php">Minha conta</a> | <a href="logout.php">Sair</a> |';
-} else {
-$login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> | <a href="conta.php">Minha conta</a> | <a href="admin/">Admin</a> | <a href="logout.php">Sair</a>';
-}
-
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Loja do Marcão</title>
+    <title>Loja do Marcão e do Jarbas</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style/style.css" />
     <script type="text/javascript" src="script/script.js"></script>
@@ -28,13 +19,13 @@ $login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> 
   <div id="container">
     <body>
       <div class="navbar">
-        <div class="logo"><label> LOJA DO MARCÃO </label><br /></div>
+        <div class="logo"><label> LOJA DO MARCÃO E DO JARBAS </label><br /></div>
         <div class="slogan">
           <label>Porque você merece o melhor, experimente!</label>
         </div>
         <ul>
           <li>
-            <a href="~/../Index.html"
+            <a href="~/../Index.php"
               ><i class="fas fa-home"></i> &nbsp;Inicio</a
             >
           </li>
@@ -62,8 +53,8 @@ $login = 'Olá '. $_SESSION['user'] .'! <a href="carrinho.php">Meu carrinho</a> 
               ><i class="fas fa-shopping-cart"></i> &nbsp;Meu carrinho</a
             >
           </li>
-          <form class="nav-search">
-            <input type="text" placeholder="&nbsp;O que você deseja?" />
+          <form class="nav-search" method="GET" action="buscaProduto.php">
+            <input type="text" name="busca" placeholder="&nbsp;O que você deseja?" />
             <button>
               <i class="fas fa-search" style="color: white;"></i>
               &nbsp;Buscar

@@ -26,7 +26,7 @@ if($_POST) {
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-	<title>Loja do Marcão | Criar produto</title>
+	<title>Loja do Marcão e do Jarbas | Criar produto</title>
     <link rel="stylesheet" href="../style/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>

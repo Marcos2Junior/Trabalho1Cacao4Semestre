@@ -29,7 +29,7 @@ $produto = $db->pegarDado("produtos", "*", "id = $id");
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
-	<title>Loja do Marcão | Alterar produto</title>
+	<title>Loja do Marcão e do Jarbas | Alterar produto</title>
     <link rel="stylesheet" href="../style/style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
